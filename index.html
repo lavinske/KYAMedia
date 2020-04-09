@@ -12,6 +12,20 @@
 	<!-- CSS and Script -->
 	<link rel="stylesheet" src="./assets/fontawesome/css/all.css">
 	<link rel="stylesheet" href="./assets/css/style.css">
+
+	<style>
+		.input-wrapper {
+        display:inline-block;
+        position: relative
+	    }
+	    .input-wrapper:after {
+	    	color:#000;
+	        font-family: 'FontAwesome';
+	        content: '\f002';
+	        position: absolute;
+	        right: 6px;
+	    }
+	</style>
 	
 	<script src="./assets/js/jquery-3.4.1.js"></script>
 	<!-- FontAwesome harus selalu diatas tulisan ini -->
@@ -22,6 +36,12 @@
 			<a class="right" href="">
 				<i class="fas fa-question-circle" style="color: white;"></i>
 				<b>Bantuan</b>
+
+		
+<div class="input-wrapper">
+     <input type="text" />
+ </div>
+
 			</a>
 		</div>
 
