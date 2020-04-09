@@ -1,3 +1,4 @@
+
 *{
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
@@ -23,6 +24,55 @@ body{
 
 .navbar{
     background-color: #281e5a;
+    color: white;
+}
+
+.navbar .logo{
+    width: 15vw;
+    padding: 5%;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 0 1vw;
+}
+
+.navbar .searchArea{
+    margin-left: auto;
+}
+
+.icon-padding{
+    padding: 2vh 2vw;
+}
+
+.searchArea input{
+    margin: 1vh 1vw;
+    padding-left: 2vw;
+    height: 5vh;
+    width: 30vw;
+    border: white;
+    border-radius: 5px;
+}
+
+.input-wrapper {
+    display:inline-block;
+    position: relative
+}
+.input-wrapper:after {
+    color: black;
+    font-family: 'FontAwesome';
+    content: '\f002';
+    position: absolute;
+    top: 1vw;
+    right: 3vw;
+}
+
+
+
+.pad-left-right{
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 .d-flex{
@@ -35,4 +85,20 @@ body{
 
 .flex-row{
     flex-direction: row;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-right{
+    margin-left: auto;
+}
+
+.justify-evenly{
+    justify-content: space-evenly;
 }

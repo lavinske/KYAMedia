@@ -12,44 +12,59 @@
 	<!-- CSS and Script -->
 	<link rel="stylesheet" src="./assets/fontawesome/css/all.css">
 	<link rel="stylesheet" href="./assets/css/style.css">
-
-	<style>
-		.input-wrapper {
-        display:inline-block;
-        position: relative
-	    }
-	    .input-wrapper:after {
-	    	color:#000;
-	        font-family: 'FontAwesome';
-	        content: '\f002';
-	        position: absolute;
-	        right: 6px;
-	    }
-	</style>
 	
 	<script src="./assets/js/jquery-3.4.1.js"></script>
 	<!-- FontAwesome harus selalu diatas tulisan ini -->
 </head>
 <body>
 	<header>
-		<div class="d-flex help">
+		<div class="d-flex align-center help">
 			<a class="right" href="">
-				<i class="fas fa-question-circle" style="color: white;"></i>
+				<i class="fas fa-question-circle"></i>
 				<b>Bantuan</b>
-
-		
-<div class="input-wrapper">
-     <input type="text" />
- </div>
-
 			</a>
 		</div>
+		
+		<div class="d-flex align-center navbar pad-left-right">
 
+			<div class="d-flex">
+				<a href="">
+					<img class="logo" src="./assets/img/kyamedia-icon.png" alt="">
+				</a>
+			</div>
+			
+			<div class="d-flex align-center">
+				<div class="d-flex align-center searchArea justify-evenly">
+					<h3>Kategori</h3><i class="fas fa-caret-down"></i>
+					<div class="input-wrapper">
+						<input type="text" name="" id="" placeholder="Cari Produk, Judul Buku, Penulis">
+					</div>
+				</div>
+
+				<div class="d-flex">
+					<a href=""><b>Masuk</b></a>
+				</div>
+	
+				<div class="d-flex icon-padding">
+					<a href="">
+						<i class="fas fa-shopping-bag fa-2x"></i>
+					</a>
+				</div>
+			</div>
+		</div>
 	</header>
+
+	<main>
+		<div class="d-flex flex-col pad-left-right">
+			<div class="d-flex justify-right">
+				<a href="">Lihat Semua</a>
+			</div>
+
+		</div>
+	</main>
 
 	<!-- Javascript -->
 		<script src="./assets/fontawesome/js/all.js" type="text/javascript"></script>
 		<!-- pastikan JS sampai sini saja -->
 </body>
 </html>
-
