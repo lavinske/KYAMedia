@@ -1,0 +1,38 @@
+*{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.help{
+    background-color: #201848;
+}
+
+.help a{
+    text-decoration: none;
+    color: white;
+}
+
+.help .right{
+    margin-left: auto;
+    margin-right: 15vw;
+}
+
+.navbar{
+    background-color: #281e5a;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.flex-col{
+    flex-direction: col;
+}
+
+.flex-row{
+    flex-direction: row;
+}
