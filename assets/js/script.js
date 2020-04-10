@@ -71,6 +71,8 @@ function content3(){
 
 function comprobarEmail(email) {
 
+        if(email==undefined) return false;
+
         email.trim();
         
         if(email.length <= 2) return false;
@@ -100,12 +102,15 @@ function comprobarEmail(email) {
 function comprobarContrasena(pass){
         // 5. Password length must be at least 5 character
 
+        if(pass == undefined) return false;
         if(pass.length < 5) return false;           
 
         return true;
 }
 
 function comprobarNombre(nombre){
+
+    if(nombre==undefined) return false;
     
     var nombre_temp = nombre.trim().split(" ");
 
