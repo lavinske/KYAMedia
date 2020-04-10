@@ -106,10 +106,8 @@ function comprobarContrasena(pass){
 }
 
 function comprobarNombre(nombre){
-
-    if(nombre == "") return false;
     
-    var nombre_temp = nombre.trim();
+    var nombre_temp = nombre.trim().split(" ");
 
     console.log(nombre_temp.length);
 
