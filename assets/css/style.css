@@ -323,6 +323,10 @@ body{
     justify-content: space-evenly;
 }
 
+.justify-between{
+    justify-content: space-between;
+}
+
 .color-navy{
     color: navy;
 }
@@ -333,4 +337,94 @@ body{
 
 .color-grey{
     color: gray;
+}
+
+.width-max{
+    width: 100%;
+}
+
+#regist {
+    padding:5vh 2vw;
+    width: 50vw;
+    background-color:rgba(25,18,56,0.5);
+    color: #fff;
+    font-size:1.25em;
+}
+
+#regist label{
+    font-weight:bold;
+    font-size:1.25em;
+}
+
+#regist .row-input{
+    margin-bottom:5vh;
+    width:100%;
+}
+
+#regist .row-input:last-child{
+    margin-bottom:0;
+}
+
+#regist input{
+    width:100%;
+}
+
+#regist .inline-input{
+    display:flex;
+}
+
+#regist .inline-input .line{
+    flex:50%;
+    margin-right:2vw;
+}
+
+#regist .inline-input .line:last-child{
+    margin-right:0 !important;
+}
+
+#regist input, #regist select{
+    color:#fff;
+    margin-top:2vh;
+    padding:1vh 1vw;
+    box-sizing: border-box;
+    background:none;
+    border:none;
+    border-bottom:2px solid #201848;
+}
+
+#regist option{
+    background:#281e5a;
+    margin:1vh 1vw;
+}
+
+#regist input::placeholder{
+    color:#eee;
+}
+
+#regist button[type=submit]{
+    background:#201848;
+    border:none;
+    color:#FFF;
+    padding:2vh 2vw;
+    width:100%;
+    cursor:pointer;
+    font-size:1.25em;
+}
+
+#regist input[type=date]::-webkit-inner-spin-button, 
+#regist input[type=date]::-webkit-clear-button { 
+    display: none;
+}
+
+#regist input[type=date]::-webkit-calendar-picker-indicator{
+    background:none;
+}
+
+#regist input[type=date]{
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input[type=date], focus {
+    background:none;
 }
