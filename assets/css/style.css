@@ -202,6 +202,173 @@ body{
 
 /* TIMO */
 
+body{
+    margin: 0vw auto;
+    overflow-x: hidden;
+    /* width: auto; */
+}
+
+
+.about-wrapper{
+    padding: 5vh 10vw;
+}
+
+.flex{
+    display: flex;
+}
+
+.column{
+    flex-flow: column;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.space-around{
+    justify-content: space-around;
+}
+.center{
+    justify-content: center;
+    align-items: center;
+}
+.banner{
+    height: 70vh;
+    background-image: url("../img/about-us-bg.png");
+    background-size: 100vw ;
+}
+.about-us-title{
+    font-size: 10vw;
+    
+}
+
+.logo-banner-about-us{
+    background-image: url("../img/kyamedia-icon.png");
+    width: 70vw;
+    height: 30vh;
+    background-size: 70vw;
+    background-repeat: no-repeat;
+}
+
+.about-wrapper{
+    width: 100vw;
+    height: 70vh;
+}
+
+.vertical-line{
+    border-left: 0.5vw solid rgb(40, 30, 90);
+    height: auto;
+    width: 10vw;
+}
+
+.navigate-content{
+    width: 20vw;
+}
+
+.about-button{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-size: 2vw;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    padding: 1vw;
+}
+
+.about-button:hover{
+    cursor: pointer;
+    background-color: rgb(40, 30, 90);
+    color: white;
+}
+
+.about-title{
+    font-size: 4vw;
+}
+
+.about{
+    padding-left: 3vw;
+    width: 60vw;
+}
+
+.about-isi{
+    margin-top: 5vh;
+    font-size: 3vw;
+    word-wrap: normal;
+}
+
+.mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 799px){
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+    }
+    .banner{
+        height: 20vh;
+        justify-content:center;
+        align-items: center;
+    }
+    .logo-banner-about-us{
+        height: 50%;
+    }
+    .vertical-line{
+        border-left: 0 black solid;
+        padding: 0;
+        height: auto;
+    }
+    .about{
+        width:80vw;
+        
+    }
+    .about-wrapper{
+        margin: 0 auto;
+    }
+    .about-title{
+        margin-top: 2vh;
+    }
+    .about-isi{
+        margin-top: 1vh;
+        text-align: justify;
+    }
+    .hl{
+        border-top: 0.3vh solid black;
+        margin-top: 2vh;
+    }
+    .about-wrapper{
+        height: auto;
+    }
+}
+
+/* book */
+
+.book-body-wrapper{
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.book-list{
+    justify-content: space-between;
+    flex-flow: row;
+}
+
+.book-img-container{
+    width: 10vw;
+    height: 30vh;
+}
+
+.book-img-container *{
+    object-fit: cover;
+}
+
+@media (max-width:799px){
+    .book-list{
+        flex-flow: column;
+    }
+}
+
 
 /* Grid System */
 .container{
