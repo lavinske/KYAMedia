@@ -69,7 +69,7 @@
 				<div class="d-flex justify-between">
 					<div class="d-flex flex-col">
 
-						<form id="regist">
+						<form onsubmit="hacerValidacion(); return false;" id="regist">
 							<div class="row-input inline-input">
 								<!-- username, password, password confirm, gender, DOB, region, I agree -->
 								<div class="line">
@@ -231,9 +231,9 @@
 								</div>
 							</div>
 
-							<div class="row-input">
+							<div class="row-input inline-input">
 								<label>
-									<input type="checkbox"> I agree to terms and conditions.
+									<input type="checkbox">I agree to terms and conditions.
 								</label>
 							</div>
 
@@ -245,7 +245,6 @@
 						
 					</div>
 
-<!--
 					<div class="d-flex flex-col grid-item-one">
 
 						<div class="d-flex justify-center book-container">

@@ -68,3 +68,110 @@ function content3(){
     $(".about-isi").html(contentx);
     
 }
+
+function comprobarEmail(email) {
+
+        email.trim();
+        
+        if(email.length <= 2) return false;
+
+        if(email.indexOf("@") == -1) return false;
+
+        if(email.lastIndexOf(".") < email.lastIndexOf("@")) return false;
+
+        // 3. Email can only have 1 '@'
+
+        if(email.lastIndexOf("@")!=email.indexOf("@")) return false;
+
+        // 4. Email format for '.' can't be next to '@'
+
+        if(email.indexOf(".") + 1 == email.indexOf("@") || email.indexOf(".") - 1 == email.indexOf("@")) return false;
+
+        // 2. Email must be endswith 'gmail.com' or 'gmail.co.id'
+    
+        if(!email.endsWith("gmail.com") && !email.endsWith("gmail.co.id"))  return false;
+
+
+        if(email.endsWith(".")) return false;
+
+        return true;
+    };
+
+function comprobarContrasena(pass){
+        // 5. Password length must be at least 5 character
+
+        if(pass.length < 5) return false;           
+
+        return true;
+}
+
+function comprobarNombre(nombre){
+
+    if(nombre == "") return false;
+    
+    var nombre_temp = nombre.trim();
+
+    console.log(nombre_temp.length);
+
+    // 1. Full name must be at least 2 words
+
+    if(nombre_temp.length < 1) return false;
+
+    return true;
+}
+
+
+function comprobarRegion(region){
+
+    if(region<34){
+        return false;
+    }
+
+    return true;
+
+}
+
+
+function comprobarGenero(genero){
+
+    var arrayDuGenero = ["hombre","mujer","rns"];
+
+    for(var i=0;i<arrayDuGenero.length;i++){
+        if(genero === arrayDuGenero[i]){
+            return true;
+        }
+    }
+
+    return false;
+
+}
+
+
+function hacerValidacion(){
+
+    var error = new Array();
+    var txtMail = document.getElementsByName("email").value;
+    var txtFName = document.getElementsByName("fname").value;
+    var txtLName = document.getElementsByName("lname").value;
+    var region = document.getElementsByName("region").value;
+    var genero = document.getElementsByName("gender").value;
+    var txtPass = document.getElementsByName("pass").value;
+    var txtCPass = document.getElementsByName("cpass").value;
+    var txtDOB = document.getElementsByName("dob").value;
+    var acuerdo = document.getElementsByName("agreement");
+    var errorBox = document.getElementsByName("errorAlert");
+
+    if(!comprobarNombre(txtFName)) error.push("Nama Depan bermasalah.");
+    if(!comprobarNombre(txtLName)) error.push("Nama Belakang bermasalah.");
+    if(!comprobarEmail(txtMail)) error.push("Email bermasalah.");
+    if(!acuerdo.checked) error.push("Agreement bermasalah.");
+    if(!comprobarContrasena(txtPass)) error.push("Password bermasalah.");
+    if(txtPass !== txtCPass) error.push("Konfirmasi Password beda");
+    if(!comprobarGenero(genero)) error.push("Gender kacaww.");
+    if(!comprobarRegion(region)) error.push("Region bukan di Indonesia.");
+
+    console.warn(error);
+
+    return false;
+
+}

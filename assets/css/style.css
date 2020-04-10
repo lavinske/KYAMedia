@@ -369,6 +369,11 @@ body{
     width:100%;
 }
 
+#regist input[type=checkbox]{
+    width:auto !important;
+    margin:1vh 1vw;
+}
+
 #regist .inline-input{
     display:flex;
 }
