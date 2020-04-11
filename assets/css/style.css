@@ -9,6 +9,10 @@ body{
     padding: 0;
 }
 
+.fix-top{
+    position: fixed;
+}
+
 .help{
     background-color: #201848;
 }
@@ -26,6 +30,7 @@ body{
 .navbar{
     background-color: #281e5a;
     color: white;
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.75);
 }
 
 .navbar .logo{
@@ -129,6 +134,10 @@ body{
 .book-cover{
     width: 100%;
     object-fit: contain;
+}
+
+.banner-container{
+    max-height: 200px;
 }
 
 .title-container{
@@ -380,7 +389,7 @@ body{
 }
 
 .container2{
-    height: 550px;
+    height: 100%;
 }
 
 .container3{
@@ -388,7 +397,7 @@ body{
 }
 
 .container4{
-    height: 300px;
+    height: 100%;
 }
 
 .container5{
