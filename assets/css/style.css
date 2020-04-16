@@ -40,6 +40,8 @@ body{
 
 .navbar .category{
     padding: 0.5em;
+    margin-left: 1vw;
+    margin-right: 1vw;
 }
 
 .navbar .right-area{
@@ -47,7 +49,7 @@ body{
 }
 
 .navbar .search-box{
-
+    width: 20vw;
 }
 
 .navbar input{
@@ -65,7 +67,7 @@ body{
 
 .input-wrapper {
     display:inline-block;
-    position: relative
+    position: relative;
 }
 
 .input-wrapper:after {
@@ -152,6 +154,7 @@ body{
     margin-top: 30px;
     margin-bottom: 5px;
     background-color: lightgray;
+    padding-bottom: 20px;
 }
 
 .follow-area .paragraph{
@@ -228,6 +231,10 @@ body{
 
 .column{
     flex-flow: column;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
 }
 
 .space-between{
@@ -375,7 +382,7 @@ body{
 
 .book-list{
     justify-content: space-between;
-    flex-flow: row;
+    flex-flow: row wrap;
 }
 
 .book-img-container{
@@ -389,7 +396,7 @@ body{
 
 @media (max-width:799px){
     .book-list{
-        flex-flow: column;
+        /* flex-flow: column; */
     }
 }
 
@@ -400,7 +407,8 @@ body{
 }
 
 .container1{
-    height: 150px;
+    height: auto;
+    flex-wrap: wrap;
 }
 
 .container2{
@@ -624,3 +632,46 @@ body{
 input[type=date], focus {
     background:none;
 }
+
+
+
+/* Timothy */
+
+.mobile{
+    display: none;
+}
+@media (max-width: 799px){
+    
+    .desktop{
+        display: none;
+    }
+    .banner-carousel{
+        margin-right: 0 !important;
+    }
+    .six-col-grid .grid-item-one{
+        width: 50%;
+    }
+    .book-list{
+        width: 100%;
+    }
+    .justify-evenly{
+        justify-content: space-between;
+    }
+
+    .eight-col-grid .grid-item-one{
+        width: 21%;
+    }
+
+    .six-col-grid .grid-item-four{
+        width: 100%;
+    }
+
+    .search-box{
+        width: 100% !important;
+    }
+    .mobile{
+        display:flex;
+    }
+}
+
+

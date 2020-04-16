@@ -25,7 +25,7 @@
 			</div>
 		</div>
 
-		<div class="d-flex navbar align-center pad-left-right">
+		<div class="d-flex navbar align-center pad-left-right desktop">
 
 			<div class="d-flex">
 				<a href=""><img class="logo" src="./assets/img/kyamedia-icon.png" alt="" srcset=""></a>
@@ -41,7 +41,7 @@
 					</div>
 
 					<div class="input-wrapper">
-						<input type="text" name="" id="" placeholder="Cari Produk, Judul Buku, Penulis">
+						<input type="text" class="search-box" name="" id="" placeholder="Cari Produk, Judul Buku, Penulis">
 					</div>
 
 				</div>
@@ -58,6 +58,26 @@
 
 		</div>
 
+		<div class="navbar d-flex flex-col pad-left-right mobile">
+			<div class="top-navbar d-flex space-between align-center">
+				<i class="fal fa-bars fa-2x d-flex"></i>
+				<div class="d-flex">
+					<a href=""><img class="logo" src="./assets/img/kyamedia-icon.png" alt="" srcset=""></a>
+				</div>
+				<div>
+					<i class="fal fa-shopping-bag fa-2x d-flex"></i>
+				</div>
+			</div>
+			
+			<div class="d-flex align-center">
+
+				<div class="input-wrapper">
+					<input type="text" class="search-box" name="" id="" placeholder="Cari Produk, Judul Buku, Penulis">
+				</div>
+
+			</div>
+		</div>
+
 	</header>
 
 	<main class="d-flex flex-col pad-left-right">	
@@ -68,7 +88,7 @@
 
 			<div class="d-flex six-col-grid align-center container">
 
-				<div class="d-flex grid-item-four">
+				<div class="d-flex grid-item-four banner-carousel">
 
 					<div class="carousel-area">
 						<a href=""><img class="carousel-item object-cover" src="./assets/img/promo1.jpg" alt=""></a>
@@ -76,7 +96,7 @@
 
 				</div>
 
-				<div class="d-flex flex-col grid-item-two">
+				<div class="d-flex flex-col grid-item-two desktop">
 
 					<div class="grid-item-hhalf">
 						<a href=""><img class="other-item object-cover" src="./assets/img/WhatsApp_Image_2020-04-01_at_16.58.17.jpeg" alt=""></a>
@@ -140,7 +160,7 @@
 				
 				<h1 class="paragraph color-navy">Rekomendasi dari Gramedia</h1>
 				
-				<div class="d-flex justify-evenly">
+				<div class="d-flex justify-evenly book-list">
 					<div class="d-flex flex-col grid-item-one">
 
 						<div class="d-flex justify-center book-container">
@@ -233,8 +253,8 @@
 				</div>
 				
 				
-				<div class="d-flex justify-evenly">
-					<div class="d-flex flex-col grid-item-onehalf">
+				<div class="d-flex justify-evenly book-list">
+					<div class="d-flex flex-col grid-item-onehalf desktop">
 
 						<div class="d-flex justify-center">
 							<img class="book-cover" src="./assets/img/Product_List_Banner-1.jpg" alt="">
@@ -320,10 +340,10 @@
 					</div>
 				</div>
 				
-				<div class="d-flex justify-evenly">
-					<div class="d-flex flex-col grid-item-onehalf">
+				<div class="d-flex justify-evenly book-list">
+					<div class="d-flex flex-col grid-item-onehalf desktop">
 
-						<div class="d-flex justify-center">
+						<div class="d-flex justify-center ">
 							<img class="book-cover" src="./assets/img/Product_List_Banner-2.jpg" alt="">
 						</div>
 						
@@ -407,10 +427,10 @@
 					</div>
 				</div>
 				
-				<div class="d-flex justify-evenly">
-					<div class="d-flex flex-col grid-item-onehalf">
+				<div class="d-flex justify-evenly book-list">
+					<div class="d-flex flex-col grid-item-onehalf desktop">
 
-						<div class="d-flex justify-center">
+						<div class="d-flex justify-center none">
 							<img class="book-cover" src="./assets/img/Product_List_Banner-3.jpg" alt="">
 						</div>
 						
@@ -494,10 +514,10 @@
 					</div>
 				</div>
 				
-				<div class="d-flex justify-evenly">
-					<div class="d-flex flex-col grid-item-onehalf">
+				<div class="d-flex justify-evenly book-list">
+					<div class="d-flex flex-col grid-item-onehalf desktop">
 
-						<div class="d-flex justify-center">
+						<div class="d-flex justify-center ">
 							<img class="book-cover" src="./assets/img/Product_List_Banner-4.jpg" alt="">
 						</div>
 						
@@ -581,10 +601,10 @@
 					</div>
 				</div>
 				
-				<div class="d-flex justify-evenly">
-					<div class="d-flex flex-col grid-item-onehalf">
+				<div class="d-flex justify-evenly book-list">
+					<div class="d-flex flex-col grid-item-onehalf desktop">
 
-						<div class="d-flex justify-center">
+						<div class="d-flex justify-center none">
 							<img class="book-cover" src="./assets/img/Product_List_Banner-5.jpg" alt="">
 						</div>
 						
@@ -665,7 +685,7 @@
 
 		<div class="d-flex follow-area pad-left-right align-center container1">
 
-			<div class="d-flex six-col-grid">
+			<div class="d-flex six-col-grid flex-wrap">
 
 				<div class="d-flex flex-col grid-item-four">
 					<b><p class="paragraph color-navy">Jadilah yang pertama tahu berita terbaru event dan penawaran spesial kami</p></b>
@@ -675,7 +695,7 @@
 					</div>
 				</div>
 
-				<div class="d-flex flex-col grid-item-two">
+				<div class="d-flex flex-col grid-item-two sosmed">
 					<b><p class="paragraph color-navy">Ikuti kami</p></b>
 					<div class="d-flex">
 						<a href="http://" target="_blank" rel="noopener noreferrer"><img src="./assets/img/instagram.png" alt=""></a>
@@ -714,7 +734,7 @@
 					<a href=""><p>Hubungi Kami</p></a>
 				</div>
 	
-				<div class="d-flex flex-col grid-item-onehalf">
+				<div class="d-flex flex-col grid-item-onehalf desktop">
 					<p>PEMBAYARAN</p>
 					<div class="d-flex">
 						<img src="./assets/img/payment-mandiri.png" alt="">
