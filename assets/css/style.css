@@ -39,9 +39,33 @@ body{
 }
 
 .navbar .category{
-    padding: 0.5em;
-    margin-left: 1vw;
-    margin-right: 1vw;
+    padding: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.menu{
+    color: black;
+    padding: 10px 20px;
+    min-width: 100px;
+}
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown:hover .dropdown-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content{
+    display: none;
+    border: 1px solid gray;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
 }
 
 .navbar .right-area{
@@ -55,7 +79,7 @@ body{
 .navbar input{
     border: white;
     border-radius: 5px;
-    padding: 1em 2em;
+    padding: 1em;
     width: 25em;
     font-size: medium;
     color: navy;
@@ -668,9 +692,14 @@ input[type=date], focus {
 
     .search-box{
         width: 100% !important;
+        margin-bottom: 10px;
     }
     .mobile{
         display:flex;
+    }
+
+    .navbar input{
+        width: 100%;
     }
 }
 
