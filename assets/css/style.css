@@ -162,6 +162,17 @@ body{
     object-fit: contain;
 }
 
+.event-container{
+    height: 200px;
+    width: 95%;
+}
+
+.event-cover{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 11px;
+}
+
 .banner-container{
     max-height: 200px;
 }
@@ -687,6 +698,10 @@ input[type=date], focus {
     }
 
     .six-col-grid .grid-item-four{
+        width: 100%;
+    }
+
+    .six-col-grid .grid-item-two{
         width: 100%;
     }
 
