@@ -129,17 +129,36 @@ body{
 }
 
 .other-item{
-    border: none;
+    /* border: none; */
+    /* border: solid 1px black; */
     border-radius: 5px;
 }
 
 .object-cover{
-    margin-bottom: 2.5%;
-    margin-top: 2.5%;
-    height: 95%;
+    /* margin-bottom: 2.5%; */
+    /* margin-top: 2.5%; */
+    height: 100%;
     width: 98%;
     object-fit: cover;
 }
+
+.object-cover1{
+    /* margin-bottom: 2%; */
+    /* margin-top: 2.5%; */
+    height: 95%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.object-cover2{
+    
+    margin-top: 9px;
+    height: 95%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
 
 .produk-item{
     /* height: 100%; */
@@ -491,7 +510,7 @@ body{
 
 .six-col-grid .grid-item-four{
     height: 100%;
-    width: 66.666%;
+    width: 65%;
     /* penanda sementara */
     /* background-color: red; */
 }
@@ -560,6 +579,10 @@ body{
 
 .justify-between{
     justify-content: space-between;
+}
+
+.text-center{
+    text-align: center;
 }
 
 .color-navy{
