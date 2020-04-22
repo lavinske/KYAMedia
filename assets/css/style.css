@@ -364,6 +364,7 @@ body{
     margin-top: 5vh;
     font-size: 2vw;
     word-wrap: normal;
+    text-align: justify;
 }
 
 .mobile{
@@ -742,4 +743,23 @@ input[type=date], focus {
     }
 }
 
+.carousel-button-container{
+    height: 100%;
+    width: 97.9%;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-left:0.5vw; */
+    padding-right:1vw;
+}
 
+.position-relative{
+    position: relative;
+}
+
+.carousel-button-container > *{
+    background-color:rgba(255,255,255,0.75);
+    border: 1px solid black;
+    font-size: 3vw;
+}
