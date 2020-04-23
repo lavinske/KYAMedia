@@ -186,6 +186,14 @@ body{
     object-fit: contain;
 }
 
+.fill-rating{
+    color: gold;
+}
+
+.unfill-rating{
+    color: gray;
+}
+
 .event-container{
     height: 200px;
     width: 95%;
