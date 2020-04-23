@@ -50,6 +50,10 @@ body{
     min-width: 100px;
 }
 
+.navbar .menu a{
+    color: black;
+}
+
 .dropdown{
     position: relative;
 }
