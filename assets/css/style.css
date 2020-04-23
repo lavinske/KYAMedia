@@ -778,9 +778,9 @@ input[type=date], focus {
 
 .carousel-legend-container{
         display: flex;
-        position: absolute;
+        /* position: absolute; */
         height: 100%;
-        width: 100%;
+        width: auto;
         justify-content: center;
         align-items: flex-end;
 }
