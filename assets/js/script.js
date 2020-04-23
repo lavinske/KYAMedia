@@ -62,10 +62,11 @@ function carouselTrigger(){
     if(firstTime==1){
         changeImg();
         firstTime=0;
-        carouselCount+=1;
+        // carouselCount+=1;
     }
-    changeCarousel = setInterval(changeImg,5000)
     addCounter = setInterval(addCarouselCount,5000)
+    changeCarousel = setInterval(changeImg,5000)
+    
 }
 
 function stopTrigger(){
