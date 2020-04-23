@@ -767,3 +767,31 @@ input[type=date], focus {
     /* border: 1px solid black; */
     font-size: 3vw;
 }
+
+.carousel-legend-container{
+        display: flex;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: flex-end;
+}
+
+.legend-button{
+    margin-bottom: 2vh;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 1vw;
+    height: 1.2vw;
+    margin-right: 0.5vw;
+}
+
+.legend-button:hover{
+    cursor: pointer;
+}
+
+#legend-1{
+    background-color: rgba(255,255,255,1);
+    border: 2px solid black;
+}

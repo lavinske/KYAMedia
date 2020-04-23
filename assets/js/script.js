@@ -1,6 +1,28 @@
 function changeImg(){
     let x = carouselCount
     $(".carousel-item").attr("src","./assets/img/promo"+x+".jpg" );
+    setLegend(x);
+}
+
+function legendClick(x){
+    stopTrigger();
+    carouselCount=x;
+    changeImg();
+    carouselTrigger();
+}
+
+function whiten(){
+    for(var i=1;i<=totalCarousel;i++){
+        // console.log($("#legend-"+i).css("background-color"));
+        $("#legend-"+i).css("background-color","rgba(255,255,255,0.5)");
+        $("#legend-"+i).css("border","1px solid black");
+    }
+}
+
+function setLegend(x){
+    whiten();
+    $("#legend-"+x).css("background-color","rgba(255,255,255,1)");
+    $("#legend-"+x).css("border","2px solid black");
 }
 
 var totalCarousel = 5
