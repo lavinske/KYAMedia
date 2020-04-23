@@ -1,13 +1,30 @@
 function changeImg(){
     let x = carouselCount
-    $(".carousel-item").attr("src","./assets/img/promo"+x+".jpg" );
+    // $(".carousel-item").animate({opacity: '0'}, 1000);
+    // $(".carousel-item").animate({width: "toggle"}, "fast");
+    $(".carousel-item").animate({width: "hide"}, 1);
+    // while(true){
+        // if($(".carousel-item").opacity==1){
+            $(".carousel-item").attr("src","./assets/img/promo"+x+".jpg" );
+        // }
+    // };
+    $(".carousel-item").css("opacity","0");
+    // $(".carousel-item").animate({opacity: '1'}, 1000);
+    $(".carousel-item").animate({width: "toggle",opacity:'1'}, 750);
+    // $(".carousel-item").animate({width: "show"}, 1000);
     setLegend(x);
+    hideImg = setTimeout(hide,4250);
+}
+
+function hide(){
+    $(".carousel-item").animate({width: "hide",opacity:'0'}, 750);
 }
 
 function legendClick(x){
     stopTrigger();
     carouselCount=x;
     changeImg();
+    carouselCount=x+1;
     carouselTrigger();
 }
 
@@ -23,6 +40,8 @@ function setLegend(x){
     whiten();
     $("#legend-"+x).css("background-color","rgba(255,255,255,1)");
     $("#legend-"+x).css("border","2px solid black");
+    carouselCount=x;
+    if(carouselCount>totalCarousel)carouselCount=1;
 }
 
 var totalCarousel = 5
@@ -36,17 +55,23 @@ function addCarouselCount(){
 
 let changeCarousel
 let addCounter
+let hideImg
 
+var firstTime=1;
 function carouselTrigger(){
-    
-    changeCarousel = setInterval(changeImg,2000)
-    addCounter = setInterval(addCarouselCount,2000)
-    
+    if(firstTime==1){
+        changeImg();
+        firstTime=0;
+        carouselCount+=1;
+    }
+    changeCarousel = setInterval(changeImg,5000)
+    addCounter = setInterval(addCarouselCount,5000)
 }
 
 function stopTrigger(){
     clearInterval(changeCarousel)
     clearInterval(addCounter)
+    clearTimeout(hideImg)
 }
 
 function next(){
@@ -69,7 +94,7 @@ function prev(){
 
 function content1(){
     let title = "Perusahaan Kami";
-    let contentx = "Nama perusahaan kami adalah KYAMedia. Perusahaan kami adalah salah satu perusahaan yang menjual bermacam-macam buku. Terdapat dua macam buku yang kami jual, buku kertas, dan buku elektronik.";
+    let contentx = "Nama perusahaan kami adalah KYAMedia. Perusahaan kami adalah salah satu perusahaan yang menjual bermacam-macam buku. Terdapat dua macam buku yang kami jual, buku kertas, dan buku elektronik. <br> <br> Kantor Pusat kami beralamat di <b>Jl. Interaksi Nomor 10101 Kota Manusia</b>";
     $(".about-title").html(title);
     $(".about-isi").html(contentx);
     
@@ -114,6 +139,26 @@ function tryGetItem(){
             // console.log(item.children[3].innerHTML);   
              
         }
+    }
+}
+
+function randomizeRating(){
+    $(".dummy").css("display","none");
+    var containers = document.getElementsByClassName("star-container");
+    containers = $(".star-container");
+    for (var i=0;i<containers.length;i++){
+        var rating = Math.floor(Math.random()*5+1);
+        for(var j=0;j<rating;j++){
+            containers[i].innerHTML+='<i class="fas fa-star fill-rating"></i>';
+            // containers[i].append('<i class="fas fa-star fill-rating"></i>');
+        }
+        for(var j=0;j<5-rating;j++){
+            containers[i].innerHTML+='<i class="far fa-star fill-rating"></i>';
+            // containers[i].append('<i class="far fa-star fill-rating"></i>');
+        }
+        var rating = Math.floor(Math.random()*1000+1);
+        containers[i].append("("+rating+")");
+
     }
 }
 

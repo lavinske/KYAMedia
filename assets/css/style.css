@@ -803,3 +803,20 @@ input[type=date], focus {
     background-color: rgba(255,255,255,1);
     border: 2px solid black;
 }
+
+.book-list{
+    margin-bottom: 2vh;
+}
+
+.display-none{
+    color: white !important;
+}
+
+/* .navbar .menu a:hover > .navbar .menu{
+    background-color:#201848;
+    color: white;
+} */
+
+.carousel-button:hover{
+    cursor: pointer;
+}
