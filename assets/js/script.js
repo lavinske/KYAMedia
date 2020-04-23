@@ -161,6 +161,17 @@ function randomizeRating(){
 
     }
 }
+var open=0;
+function dropdownShow(){
+    if(open==0) {
+        $("#dropdown-mobile").css("display","flex");
+        $("#dropdown-mobile").css("flex-flow","column");
+        open=1;
+    }else{
+        $("#dropdown-mobile").css("display","none");
+        open=0;
+    }
+}
 
 function comprobarEmail(email) {
 
