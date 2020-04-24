@@ -228,7 +228,7 @@ return true;
 
 function comprobarRegion(region){
 
-if(region<34){
+if(region>34){
     return false;
 }
 
@@ -254,17 +254,26 @@ return false;
 
 function hacerValidacion(){
 
+document.getElementsByClassName("error-msg")[0].innerText="";
+document.getElementsByClassName("error-msg")[1].innerText="";
+document.getElementsByClassName("error-msg")[2].innerText="";
+document.getElementsByClassName("error-msg")[3].innerText="";
+document.getElementsByClassName("error-msg")[4].innerText="";
+document.getElementsByClassName("error-msg")[5].innerText="";
+document.getElementsByClassName("error-msg")[6].innerText="";
+document.getElementsByClassName("error-msg")[7].innerText="";
+
 var error = new Array();
-var txtMail = document.getElementsByName("email").value;
-var txtFName = document.getElementsByName("fname").value;
-var txtLName = document.getElementsByName("lname").value;
-var region = document.getElementsByName("region").value;
-var genero = document.getElementsByName("gender").value;
-var txtPass = document.getElementsByName("pass").value;
-var txtCPass = document.getElementsByName("cpass").value;
-var txtDOB = document.getElementsByName("dob").value;
-var acuerdo = document.getElementsByName("agreement");
-var errorBox = document.getElementsByName("errorAlert");
+var txtMail = document.getElementsByName("email")[0].value;
+var txtFName = document.getElementsByName("fname")[0].value;
+var txtLName = document.getElementsByName("lname")[0].value;
+var region = document.getElementsByName("region")[0].value;
+var genero = document.getElementsByName("gender")[0].value;
+var txtPass = document.getElementsByName("pass")[0].value;
+var txtCPass = document.getElementsByName("cpass")[0].value;
+var txtDOB = document.getElementsByName("dob")[0].value;
+var acuerdo = document.getElementsByName("agreement")[0];
+var errorBox = document.getElementsByName("errorAlert")[0];
 
 if(!comprobarNombre(txtFName)) error.push("Nama Depan bermasalah.");
 if(!comprobarNombre(txtLName)) error.push("Nama Belakang bermasalah.");
@@ -275,7 +284,20 @@ if(txtPass !== txtCPass) error.push("Konfirmasi Password beda");
 if(!comprobarGenero(genero)) error.push("Gender kacaww.");
 if(!comprobarRegion(region)) error.push("Region bukan di Indonesia.");
 
-console.warn(error);
+if(!comprobarNombre(txtFName)) document.getElementsByClassName("error-msg")[0].innerText="Nama Depan bermasalah.";
+if(!comprobarNombre(txtLName)) document.getElementsByClassName("error-msg")[1].innerText="Nama Belakang bermasalah.";
+if(!comprobarEmail(txtMail)) document.getElementsByClassName("error-msg")[2].innerText="Email bermasalah.";
+if(!comprobarContrasena(txtPass)) document.getElementsByClassName("error-msg")[4].innerText="Password bermasalah.";
+if(txtPass !== txtCPass) document.getElementsByClassName("error-msg")[5].innerText="Konfirmasi Password beda";
+if(!comprobarGenero(genero)) document.getElementsByClassName("error-msg")[3].innerText="Gender kacaww.";
+if(!comprobarRegion(region)) document.getElementsByClassName("error-msg")[6].innerText="Region bukan di Indonesia.";
+if(!acuerdo.checked) document.getElementsByClassName("error-msg")[7].innerText="Agreement bermasalah.";
+
+// console.warn(error);
+
+if (error.length==0){
+    alert("pendaftaran berhasil");
+}
 
 return false;
 

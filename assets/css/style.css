@@ -855,3 +855,12 @@ input[type=date], focus {
 .copyright-area i, .copyright-area svg{
     margin-right:.5em;
 }
+
+@media (max-width:799px){
+    .mobile-width-100{  
+        width: 100% !important;
+    }
+}
+.error-msg{
+    color: red;
+}
