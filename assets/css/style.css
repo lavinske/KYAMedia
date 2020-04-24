@@ -50,8 +50,16 @@ body{
     min-width: 100px;
 }
 
-.navbar .menu a{
-    color: black;
+.navbar .menu{
+    color: #281e5a;
+    padding: 10px 20px;
+    min-width: 100px;
+    transition:all .2s ease-in-out;
+}
+
+.navbar .menu:hover{
+    background : #281e5a;
+    color:#FFF;
 }
 
 .dropdown{
@@ -239,16 +247,11 @@ body{
 
 .register-button{
     color: white;
-    width: 6em;
-    margin: 0 5px;
-    border: 0.5px solid navy;
+    padding:1em 1em;
     background-color: #201848;
-    border-radius: 3px;
-    outline: none;
-}
-
-.register-button:hover{
-    cursor: pointer;
+    cursor: pointer;    
+    text-decoration:none;
+    margin-left:1em;
 }
 
 .misc-area{
@@ -258,22 +261,18 @@ body{
 .misc-area a{
     text-decoration: none;
     font-size: 12px;
-}
-
-.misc-area a p{
     color: gray;
+    margin-top:2em;
 }
 
-.misc-area p{
+
+.misc-area .misc-title-container{
     color: navy;
-    font-weight: 100;
-}
-
-.misc-title-container{
-    height: 30px;
+    font-weight: 500;
 }
 
 .copyright-area{
+    padding:1vh 0;
     padding: 10px 0;
     color: white;
     background-color: #201848;
@@ -491,6 +490,8 @@ body{
     height: auto;
 }
 
+
+
 .container5{
     height: 230px;
 }
@@ -562,6 +563,10 @@ body{
     padding-right: 10vw;
 }
 
+.pad-btm{
+    padding-bottom: 5vh;
+}
+
 .d-flex{
     display: flex;
 }
@@ -616,15 +621,16 @@ body{
 
 #regist {
     padding:5vh 2vw;
+    margin-bottom:2vh;
     width: 50vw;
-    background-color:rgba(25,18,56,0.5);
-    color: #fff;
+    color: #222;
     font-size:1.25em;
 }
 
 #regist label{
+    color:navy;
     font-weight:bold;
-    font-size:1.25em;
+    font-size:1.10em;
 }
 
 #regist .row-input{
@@ -658,18 +664,22 @@ body{
     margin-right:0 !important;
 }
 
+#regist ::placeholder{
+    color:#888 !important;
+    opacity:1;
+}
+
 #regist input, #regist select{
-    color:#fff;
+    color: navy;
     margin-top:2vh;
     padding:1vh 1vw;
     box-sizing: border-box;
     background:none;
     border:none;
-    border-bottom:2px solid #201848;
+    border-bottom:2px solid #281e5a;
 }
 
 #regist option{
-    background:#281e5a;
     margin:1vh 1vw;
 }
 
@@ -678,13 +688,19 @@ body{
 }
 
 #regist button[type=submit]{
-    background:#201848;
-    border:none;
+    background:#281e5a;
+    border:.5px solid #FFF;
     color:#FFF;
     padding:2vh 2vw;
     width:100%;
     cursor:pointer;
     font-size:1.25em;
+    transition:all .5s ease-in-out;
+}
+#regist button[type=submit]:hover{
+    background:#fff;
+    color:#281e5a;
+    border:.5px solid #281e5a;
 }
 
 #regist input[type=date]::-webkit-inner-spin-button, 
@@ -787,21 +803,18 @@ input[type=date], focus {
 
 .legend-button{
     margin-bottom: 2vh;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(151,151,151,0.5);
     border-radius: 50%;
-    border: 1px solid black;
-    width: 1vw;
-    height: 1.2vw;
+    width: .7vw;
+    height: .7vw;
     margin-right: 0.5vw;
+    cursor: pointer;
+    border:.5px solid rgba(255,255,255,0.5) ;
 }
 
-.legend-button:hover{
-    cursor: pointer;
-}
 
 #legend-1{
-    background-color: rgba(255,255,255,1);
-    border: 2px solid black;
+    background-color: rgba(255,255,255,0.5);
 }
 
 .book-list{
@@ -817,6 +830,22 @@ input[type=date], focus {
     color: white;
 } */
 
-.carousel-button:hover{
+.carousel-button{
     cursor: pointer;
+    padding:0 .5em;
+    color:rgba(151,151,151,0.5);
+    -webkit-text-stroke:.25px rgba(255,255,255,0.5); 
+}
+
+.dropdown i, .dropdown svg {
+    margin-left:1.10em;
+}
+
+.menu-atas i, .menu-atas svg{
+    margin:.5em 0;
+    margin-right:.5em;
+}
+
+.copyright-area i, .copyright-area svg{
+    margin-right:.5em;
 }

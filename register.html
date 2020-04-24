@@ -18,7 +18,7 @@
 <body onload="carouselTrigger()">
 
 	<header>
-		<div class="d-flex help pad-left-right">
+		<div class="d-flex help pad-left-right menu-atas">
 			<div class="justify-right">
 				<a href="./about-us.html"><i class="fas fa-question-circle icon"></i>Tentang Kami</a>
 			</div>
@@ -35,30 +35,29 @@
 				<div class="d-flex align-center">
 
 					<div class="d-flex align-center category dropdown">
-						<b><p>Kategori</p></b>
+						<b>Kategori</b>
 						<i class="fas fa-caret-down"></i>
 						<div class="dropdown-content">
 							<div class="d-flex">
-								<div class="menu"><a href="./paper-book.html">Book</a></div>
-								<div class="menu"><a href="./e-book.html">E-Book</a></div>
+								<a class="menu" href="./paper-book.html">Book</a>
+								<a class="menu" href="./e-book.html">E-Book</a>
 							</div>
 							<div class="d-flex">
-								<div class="menu"><a href="">Horror</a></div>
-								<div class="menu"><a href="">Romantic</a></div>
+								<a class="menu" href="#">Horror</a>
+								<a class="menu" href="#">Romantic</a>
 							</div>
 							<div class="d-flex">
-								<div class="menu"><a href="">Webtoon</a></div>
-								<div class="menu"><a href="">Komik</a></div>
+								<a class="menu" href="#">Webtoon</a>
+								<a class="menu" href="#">Komik</a>
 							</div>
 							<div class="d-flex">
-								<div class="menu"><a href="">Tas</a></div>
-								<div class="menu"><a href="">Jaket</a></div>
+								<a class="menu" href="#">Tas</a>
+								<a class="menu" href="#">Jaket</a>
 							</div>
 							<div class="d-flex">
-								<div class="menu"><a href="">Dompet</a></div>
-								<div class="menu"><a href="">Alat tulis</a></div>
+								<a class="menu" href="#">Dompet</a>
+								<a class="menu" href="#">Alat tulis</a>
 							</div>
-							
 						</div>
 					</div>
 
@@ -69,11 +68,11 @@
 				</div>
 				
 				<div>
-					<b><a href="./register.html">Masuk</a></b>
+					<b><a href="./register.html">Daftar</a></b>
 				</div>
 
 				<div>
-					<i class="fal fa-shopping-bag fa-2x"></i>
+					<i class="fas fa-shopping-bag fa-2x"></i>
 				</div>
 
 			</div>
@@ -82,38 +81,37 @@
 
 		<div class="navbar d-flex flex-col pad-left-right justify-center mobile">
 			<div class="d-flex space-between align-center">
-				<div class="dropdown">
-					<i class="fal fa-bars fa-2x d-flex"></i>
-					<div class="dropdown-content">
-						<div class="d-flex">
-							<div class="menu"><a href="./paper-book.html">Book</a></div>
-							<div class="menu"><a href="./e-book.html">E-Book</a></div>
+				<div class="dropdown mobile" onclick="dropdownShow()">
+					<i class="fas fa-bars fa-2x d-flex"></i>
+					<div class="dropdown-content" id="dropdown-mobile">
+							<div class="d-flex">
+								<a class="menu" href="./paper-book.html">Book</a>
+								<a class="menu" href="./e-book.html">E-Book</a>
+							</div>
+							<div class="d-flex">
+								<a class="menu" href="#">Horror</a>
+								<a class="menu" href="#">Romantic</a>
+							</div>
+							<div class="d-flex">
+								<a class="menu" href="#">Webtoon</a>
+								<a class="menu" href="#">Komik</a>
+							</div>
+							<div class="d-flex">
+								<a class="menu" href="#">Tas</a>
+								<a class="menu" href="#">Jaket</a>
+							</div>
+							<div class="d-flex">
+								<a class="menu" href="#">Dompet</a>
+								<a class="menu" href="#">Alat tulis</a>
+							</div>
 						</div>
-						<div class="d-flex">
-							<div class="menu"><a href="">Horror</a></div>
-							<div class="menu"><a href="">Romantic</a></div>
-						</div>
-						<div class="d-flex">
-							<div class="menu"><a href="">Webtoon</a></div>
-							<div class="menu"><a href="">Komik</a></div>
-						</div>
-						<div class="d-flex">
-							<div class="menu"><a href="">Tas</a></div>
-							<div class="menu"><a href="">Jaket</a></div>
-						</div>
-						<div class="d-flex">
-							<div class="menu"><a href="">Dompet</a></div>
-							<div class="menu"><a href="">Alat tulis</a></div>
-						</div>
-						
-					</div>
 				</div>
 				
 				<div class="d-flex">
 					<a href="./index.html"><img class="logo" src="./assets/img/kyamedia-icon.png" alt="" srcset=""></a>
 				</div>
 				<div>
-					<i class="fal fa-shopping-bag fa-2x d-flex"></i>
+					<i class="fas fa-shopping-bag fa-2x d-flex"></i>
 				</div>
 			</div>
 			
@@ -349,8 +347,16 @@
 					</div>
 
 					<div class="carousel-button-container">
-						<i onclick="prev()" class="fal fa-arrow-circle-left"></i>
-						<i onclick="next()" class="fal fa-arrow-circle-right"></i>
+						<i class="fas fa-chevron-left carousel-button" onclick="prev()"></i>
+						<div class="carousel-legend-container">
+	
+							<button class="legend-button" id="legend-1" onclick="legendClick(1)"></button>
+							<button class="legend-button" id="legend-2" onclick="legendClick(2)"></button>
+							<button class="legend-button" id="legend-3" onclick="legendClick(3)"></button>
+							<button class="legend-button" id="legend-4" onclick="legendClick(4)"></button>
+							<button class="legend-button" id="legend-5" onclick="legendClick(5)"></button>
+						</div>
+						<i class="fas fa-chevron-right carousel-button" onclick="next()"></i>
 					</div>
 
 				</div>
@@ -381,7 +387,7 @@
 					<b><p class="paragraph color-navy">Jadilah yang pertama tahu berita terbaru event dan penawaran spesial kami</p></b>
 					<div class="d-flex">
 						<input type="email" name="" id="" placeholder="Masukkan Alamat Email Anda">
-						<button class="register-button./register.html">Daftar</button>
+						<a class="register-button" href="./register.html">Daftar</a>
 					</div>
 				</div>
 
@@ -399,33 +405,33 @@
 
 		</div>
 
-		<div class="d-flex misc-area pad-left-right container4">
+		<div class="d-flex misc-area pad-left-right container4 pad-btm">
 
 			<div class="d-flex six-col-grid justify-evenly">
 				<div class="d-flex flex-col grid-item-one">
 					<p class="misc-title-container">BELANJA</p>
-					<a href=""><p>Berbelanja</p></a>
-					<a href=""><p>Pembayaran</p></a>
-					<a href=""><p>Pengiriman</p></a>
+					<a href="">Berbelanja</a>
+					<a href="">Pembayaran</a>
+					<a href="">Pengiriman</a>
 				</div>
 	
 				<div class="d-flex flex-col grid-item-one">
-					<p class="misc-title-container">TENTANG GRAMEDIA</p>
-					<a href=""><p>Tentang Kami</p></a>
-					<a href=""><p>Toko Kami</p></a>
-					<a href=""><p>Kerjasama</p></a>
+					<p class="misc-title-container">TENTANG KYAMEDIA</p>
+					<a href="">Tentang Kami</a>
+					<a href="">Toko Kami</a>
+					<a href="">Kerjasama</a>
 				</div>
 	
 				<div class="d-flex flex-col grid-item-one">
 					<p class="misc-title-container">LAINNYA</p>
-					<a href=""><p>Syarat & Ketentuan</p></a>
-					<a href=""><p>Kebijakan & Privasi</p></a>
-					<a href=""><p>Bantuan</p></a>
-					<a href=""><p>Hubungi Kami</p></a>
+					<a href="">Syarat & Ketentuan</a>
+					<a href="">Kebijakan & Privasi</a>
+					<a href="">Bantuan</a>
+					<a href="">Hubungi Kami</a>
 				</div>
 	
 				<div class="d-flex flex-col grid-item-onehalf desktop">
-					<p>PEMBAYARAN</p>
+					<p class="misc-title-container">PEMBAYARAN</p>
 					<div class="d-flex">
 						<img src="./assets/img/payment-mandiri.png" alt="">
 						<img src="./assets/img/payment-permata.png" alt="">
