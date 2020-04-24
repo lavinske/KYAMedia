@@ -252,8 +252,14 @@ body{
     cursor: pointer;    
     text-decoration:none;
     margin-left:1em;
+    transition:all .5s ease-in-out;
 }
 
+.register-button:hover{
+    color: #201848;
+    background:none;
+    border:.5px solid #201848;
+}
 .misc-area{
     background-color: lightgrey;
 }
